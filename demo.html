@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popup Example</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+/* Popup Core */
+.sidepopup {
+  width: 300px;
+  height: 70px;
+  color: #fff;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  right: -600px; /* Start hidden off-screen */
+  margin-top: 100px;
+  box-sizing: border-box;
+  z-index: 9999;
+  transition: right 1.5s ease-in-out;
+}
+
+.sidepopup a:link,
+.sidepopup a:hover,
+.sidepopup a:active,
+.sidepopup a:visited {
+  color: #fff;
+}
+
+.sidepopup table td {
+  padding: 0 5px;
+}
+
+.sidepopup table td.close-icon {
+  border-left: 2px solid #fff;
+}
+
+.sidepopup table td.close-icon i {
+  margin-left: 8px;
+}
+
+/* Styling for different types of popup */
+.sp-tuktuk {
+  background-color: #0a4e90;
+}
+
+.sp-tuktuk td.close-icon {
+  border-left: 2px solid #072c4f !important;
+}
+
+/* Slide-in animation */
+.slideIn {
+  right: 0;
+  transition: right 1.5s ease-in-out;
+}
+</style>
+</head>
+<body>
+
+<div id="sidepopup" class="sidepopup sp-tuktuk">
+  <table class="table-condensed">
+    <tr>
+      <td><img src="https://www.bangkokfoodtours.com/wp-content/themes/BFT-theme/images/header/tuktuk-icon2.png" alt=""></td>
+      <td><a href="https://www.smilingtuktuk.com" target="_blank">For more local tours, <br>Book Here!</a></td>
+      <td class="close-icon"><i class="fas fa-times close" aria-hidden="true"></i></td>
+    </tr>
+  </table>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Delay popup display by 3 seconds
+  setTimeout(function () {
+    document.getElementById('sidepopup').classList.add('slideIn');
+  }, 1000); // 3000ms = 3 seconds
+  
+  // Close button functionality
+  document.querySelector('.close-icon').addEventListener('click', function () {
+    document.getElementById('sidepopup').classList.remove('slideIn');
+  });
+});
+</script>
+
+</body>
+</html>

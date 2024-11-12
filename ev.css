@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400");
+
+body{
+	text-align: center;
+}
+[type="radio"]{
+  display: none;
+}
+.events{
+padding-top: 30px;
+}
+label{
+  padding: 1rem 1.75rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.25s;
+   font-size: 2.8vh;
+   background:rgba(255, 243, 24, 0.319) ;
+  height: 40px;
+  
+}
+[type="radio"]:checked + label{
+	background: gold;
+}
+[type="radio"]:nth-of-type(2):checked ~ .gallery .card:not(.fine),
+[type="radio"]:nth-of-type(3):checked ~ .gallery .card:not(.performing),
+[type="radio"]:nth-of-type(4):checked ~ .gallery .card:not(.games),
+[type="radio"]:nth-of-type(5):checked ~ .gallery .card:not(.literature),
+[type="radio"]:nth-of-type(6):checked ~ .gallery .card:not(.star),
+[type="radio"]:nth-of-type(7):checked ~ .gallery .card:not(.media)
+{
+  display: none;
+}
+.gallery{
+  display: grid;
+	justify-content: center;
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-auto-rows: 1fr;
+  grid-gap: 1rem;
+  padding: 0.8rem;
+  margin-top: 2rem;
+}
+.card{
+  margin: 0;
+  background: #7a0f7aad;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  box-shadow: 0 0 10px silver;
+  transition: box-shadow 0.35s;
+}
+.card:hover{
+  box-shadow: 0 0 25px #0009;
+}
+.card__image{
+  width: 100%;
+  object-fit: cover;
+}
+.card__caption{
+	font-weight: bold;
+  font-variant: small-caps;
+  padding: 0.5rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+/* Donate layer */
+/* .donate{
+	position: fixed;
+	bottom: 0.25rem;
+	right: 0.25rem; 
+	border-radius: 0.5rem;
+	background-color: whitesmoke;
+	padding: 0 1rem;
+	font-weight: bold;
+	color: dimgray;
+}
+.donate a{
+	text-decoration: none;
+	color: orangered;
+	border-bottom: 2px solid transparent;
+	transition: 0.35s;
+}
+.donate a:hover{
+	border-bottom-color: orangered;
+} */

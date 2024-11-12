@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+:root {
+    --primary: #fff6f6;
+    --secondary: #333;
+    --errorColor: red;
+    --containerWidth: 80vh;
+}
+
+
+.container_form {
+    width: var(--containerWidth);
+    margin: 2vh auto;
+    /* background: #b75cd5; */
+    background: linear-gradient(#dc7efb, #4e0e6c);
+    border-radius: 5px;
+    padding: 5vh ;
+    padding: auto;
+    text-align: center;
+}
+
+.progress-bar {
+    display: flex;
+    margin: 3vh 0;
+}
+
+.step {
+    width: 25%;
+    text-align: center;
+    position: relative;
+}
+
+.step p {
+    font-size: 1.8vh;
+    color: rgb(255, 246, 198);
+}
+
+.bullet {
+    width: 3vh;
+    height: 3vh;
+    border: 0.2vh solid #e6dbdb;
+    border-radius: 20%;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.bullet.active {
+    background: #7dff84;
+    color: rgb(111, 111, 111);
+}
+
+.check {
+    display: none;
+}
+
+.check.active {
+    display: inline;
+}
+
+.form-outer {
+    overflow: hidden;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    width: 400%;
+}
+
+.page {
+    width: 25%;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.title {
+    font-size: 2.5vh;
+    margin-bottom: 20px;
+}
+
+.field {
+    margin: 3vh 0;
+    text-align: left;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 0.5vh;
+}
+
+.field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #d4c8d8;
+}
+
+.invalid-input {
+    border-color: red;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.next,
+.submit {
+    background: #2c0646;
+    color: white;
+    width: 200px;
+}
+
+.prev {
+    background: #bbb;
+}
